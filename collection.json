@@ -1,0 +1,54 @@
+{
+  "info": {
+    "name": "Todo API",
+    "description": "Postman collection for Todo REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Todos",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/todos"
+      }
+    },
+    {
+      "name": "Get Single Todo",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:5000/api/todos/:id"
+      }
+    },
+    {
+      "name": "Create Todo",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:5000/api/todos",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"My new task\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Update Todo",
+      "request": {
+        "method": "PUT",
+        "url": "http://localhost:5000/api/todos/:id",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated task\",\n  \"completed\": true\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete Todo",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:5000/api/todos/:id"
+      }
+    }
+  ]
+}
